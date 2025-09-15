@@ -1,0 +1,14 @@
+Agenda 15/9/25
+
+1.Recap
+2.Components - revisit
+3.Pipes
+4.Binding - revisit
+5.Search - 
+6.Components Lifecycle hooks
+-oninit/Constructor
+7.Interface - type checking
+8.Routing
+9.ROuter outlet/RouterLink/route.ts
+10.Font awesome /bootstrap icons /bootstrap js - installations
+11.error component for redirects

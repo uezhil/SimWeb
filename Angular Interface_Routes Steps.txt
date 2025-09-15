@@ -1,0 +1,48 @@
+
+1.npm install -g @angular/cli
+2. ng new Appfolder
+3.cd Appfolder
+4.ng serve --open /npm start
+5.localhost:4200
+6.ng generate component home / ng g c home
+7. missing nodemodules  - npm i
+
+------------------------------
+Interface - strong type checking
+1.Imovie - export interface iMovie { movieID:number...}
+2.movie comp - movies:IMovie
+-------------------------------
+
+Search feature - component lifecycle hooks
+1.constructor/nginit
+2.constructor - searchedmovies:IMovie[] = movies
+3.get /set - searchterm
+4.setter - ternary? - no search word -> load allmovies : if there's a word - >performsearch()
+5.performsearch - convertintothe same case (text & table data) /filter/indexof
+6.movies.html - let movie of searchedmovies
+
+------------------------------------------
+Routing 
+1.Configure route
+2. Route - actions
+3.Display view
+
+1.ROute config
+route.ts - routes[path:'movies',component:movies , path:'','**' ]
+
+2.Actions - RouterLink , RouterLinkActive
+[routerLink]="['/about']" routerLinkActive="active"
+
+3.RouterOutlet - display the pages - placeholder/container
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
