@@ -1,0 +1,33 @@
+Agenda 16/9/25
+
+1.Recap
+2.Services
+3.Dependency Injection
+4.Constructor DI
+--> Move the data from Comp -> Service
+-->Fetch the shared data from all the comp
+
+--------------------------
+
+Components - revisit
+1.Comp communication
+2.Input/Output 
+3.Event custom
+---> Shared rating component 
+---->Movie comp - rating integer as input -> ****** as output
+----> Icon s/w - Bi, FA
+
+-----------------------------  
+
+Routing - 
+1.By id param
+2.Sub - 
+3.Activated Route 
+4.DI - call the act route
+5.route.ts - path - id
+
+-->Movie Detail comp -
+--> DI constructor - activated route/
+-->sub - route - dynamic values
+--> Crud -Edit/delete
+

@@ -1,0 +1,40 @@
+Angular - Services & Comp comm
+
+Services
+-----------------------------
+1.Service - class - purpose
+2.@Injectable - decorator
+3.providedin - root
+
+4.Cut & paste in Movie data Component -> services
+5.getMovies - movies
+
+Movies component
+1.Import services
+2.DI - constructor - 
+constructor(private _movservice:MovieService){}
+3.this.movies = this._movservice.getMovies();
+
+
+-------------------------
+
+Component Commnunication
+
+1.Install FA/BI
+2.Shared - component - rating
+-css - width, html -stars fastar, comp
+3.rating.ts 
+-@Input - rating(Movie comp)  /@output - event
+4.Formula - this.starWidth= this.rating * 100/5;
+5. Output - Event - onClick():void{
+        this.ratingClicked.emit(` rating is ${this.rating}`);
+
+    }
+
+6.Movie.Component.ts - onRatingClicked(rate:string):void{
+    this.title = 'Top Movies' + rate;
+  }
+
+7.Movie.html-  <movie-rating [rating]='movie.movieRating'
+                (ratingClicked)='onRatingClicked($event)'
+    ></movie-rating>
