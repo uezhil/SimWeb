@@ -1,0 +1,60 @@
+Angular - Route & Forms
+
+Route by iD
+--------------------------------
+1.Movie Detail component
+2.Movie service - getMoviebyId(id:number){
+    const movie = this.movies.find(
+      movie=> movie.movieID === id
+
+    )
+    return movie;
+  }
+3.detail - call the service 
+//DI
+  constructor(
+    private router:Router,
+    private aroute:ActivatedRoute,
+    private movService:MovieService
+  ){}
+  
+4.ngOnInit():void{
+
+    this.id = Number(this.aroute.snapshot.paramMap.get('id'));
+       this.movie = this.movService.getMoviebyId(this.id);
+     }
+5.route.ts
+{path:'movies/:id',component:MovieDetailComponent}
+
+6.movie.html
+  <a [routerLink]="['/movies',movie.movieID]">
+                      {{movie.movieName|titlecase}}</a>
+                    
+7.movie.detail.html
+Get all the movie detail.
+
+
+---------------
+Forms
+
+1. Template 
+2. Reactive
+
+Template
+-ngModel - more code in template & less in component
+
+Reactive - more code in component & less in template
+-FormGroup/FormControl
+-get for values
+
+------------------
+
+Crud
+Movie.edit
+Create updatemovie in service
+call from template movie detail in edit button
+create movie edit form 
+-Get movie by id
+-use the id to call update movie function in service
+-redirect using route navigate
+
